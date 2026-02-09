@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sruuu💖</title>
+
+<style>
+
+/* GENERAL STYLE */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page {
+    height: 100vh;
+    display: none;
+    padding-top: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+   
+}
+
+/* DARK OVERLAY FOR TEXT VISIBILITY */
+.page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+.page > * {
+    position: relative;
+    z-index: 1;
+}
+
+.active {
+    display: block;
+}
+
+/* BACKGROUND IMAGES */
+#page1 {
+    background-image: url('IMG_20260209_150221.jpg');   /* FIRST PAGE IMAGE */
+}
+
+#page2 {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    height: auto;
+    padding-bottom: 50px;
+}
+
+#page3 {
+    background-image: url('Snapchat-100058316.jpg');   /* THIRD PAGE IMAGE */
+}
+
+/* TEXT */
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+.quote {
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+    <h1>Happy Birthday Sruuu🎂</h1>
+
+    <p class="quote">
+        "May your smile shine brighter than candles,
+        and may your dreams bloom like flowers.
+        Happy Birthday Beautiful!"
+    </p>
+
+    <button onclick="showPage(2)">See Memories ❤️</button>
+</div>
+
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+    <h1>Beautiful Captures 📸</h1>
+
+    <div class="gallery">
+        <img src="Snapchat-86128629.jpg">
+        <img src="Snapchat-100058316.jpg">
+        <img src="Snapchat-109244621.jpg">
+        <img src="Snapchat-1242083965.jpg">
+         <img src="Snapchat-1993496235.jpg">
+        <img src="IMG_4815.JPG">
+        <img src="IMG_4833.JPG">
+        <img src="IMG_4866.JPG">
+        <img src="IMG_5012.JPG">
+        
+    </div>
+
+    <button onclick="showPage(3)">Littel More Wish 💖</button>
+</div>
+
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+    <h1>Once Again...</h1>
+
+    <p class="quote">
+ "To my best friend, happy birthday!
+You are not just a friend, you are family to me.
+Every moment with you becomes a beautiful memory.
+May this year bring success, peace, and endless smiles.
+Stay the same amazing person always.
+I’m lucky to have you in my life."
+        "Happy Birthday Srushti❤️"
+    </p>
+
+    <h2> I am not an coder or a developer just tried to make you feel special .
+        Everyone will wish you .
+        But you will remember me somehow I made uniqueness to make your day better  🎉</h2>
+</div>
+
+
+<script>
+function showPage(pageNumber) {
+    document.querySelectorAll(".page").forEach(p => {
+        p.classList.remove("active");
+    });
+
+    document.getElementById("page" + pageNumber)
+        .classList.add("active");
+
+    window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
